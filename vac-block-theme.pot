@@ -1,0 +1,95 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: VAC Block Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-12 22:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.8.1; php-8.2.28\n"
+"X-Domain: vac-block-theme"
+
+#: inc/block-patterns.php:311
+msgid "A banner with call to action button"
+msgstr ""
+
+#: inc/block-patterns.php:21
+msgid "A grid layout showcasing product features with icons"
+msgstr ""
+
+#: inc/block-patterns.php:170
+msgid "A testimonial slider showcasing farmer feedback"
+msgstr ""
+
+#: inc/block-patterns.php:310
+msgid "Call to Action Banner"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Custom block theme for VASUKI AGRO CHEMICALS LLP, a manufacturer of plant "
+"growth promoters using bio materials."
+msgstr ""
+
+#: inc/block-patterns.php:169
+msgid "Farmer Testimonials"
+msgstr ""
+
+#: functions.php:60
+msgid "Footer Menu"
+msgstr ""
+
+#: inc/block-styles.php:109
+msgid "Green Checklist"
+msgstr ""
+
+#: inc/block-styles.php:21
+msgid "Grow on Hover"
+msgstr ""
+
+#: inc/block-styles.php:92
+msgid "Highlighted Text"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.sppcode.in/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.vasukiagro.in/"
+msgstr ""
+
+#: inc/block-styles.php:38
+msgid "Leaf Border"
+msgstr ""
+
+#: inc/block-styles.php:65
+msgid "Leaf Frame"
+msgstr ""
+
+#: functions.php:59
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/block-patterns.php:20
+msgid "Product Features Grid"
+msgstr ""
+
+#. Author of the theme
+msgid "S P Pramodh"
+msgstr ""
+
+#. Name of the theme
+msgid "VAC Block Theme"
+msgstr ""
+
+#: functions.php:141
+msgid "Vasuki Agro"
+msgstr ""

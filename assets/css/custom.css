@@ -1,0 +1,264 @@
+/**
+ * VAC Block Theme Custom CSS
+ * 
+ * This file contains custom CSS styles for animations and additional styling
+ * for the VASUKI AGRO CHEMICALS LLP website
+ */
+
+/* Animation classes */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade in from left */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.fade-in-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade in from right */
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.fade-in-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale up animation */
+.scale-up {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.scale-up.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Product Card Hover Effects */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effects */
+.wp-block-button__link {
+    transition: all 0.3s ease;
+}
+
+.wp-block-button__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header adjustments for smaller screens */
+@media (max-width: 781px) {
+    .site-header-container {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+}
+
+/* Product cards for mobile */
+@media (max-width: 600px) {
+    .product-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Improved accessibility focus states */
+a:focus, 
+button:focus, 
+input:focus, 
+textarea:focus {
+    outline: 2px solid var(--wp--preset--color--primary-green);
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--wp--preset--color--soft-sand);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--wp--preset--color--primary-green);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--wp--preset--color--earth-brown);
+}
+
+/* Contact Form Styling */
+.wp-block-contact-form-7-contact-form-selector,
+.wpcf7 {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wpcf7 form {
+    background-color: var(--wp--preset--color--white, #ffffff);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wpcf7 form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.wpcf7 label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--wp--preset--color--heading, #333333);
+}
+
+.wpcf7-form-control-wrap {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="url"],
+.wpcf7 input[type="number"],
+.wpcf7 select,
+.wpcf7 textarea {
+    width: 80%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--wp--preset--color--light-grey, #e0e0e0);
+    border-radius: 4px;
+    background-color: var(--wp--preset--color--background, #f9f9f9);
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.wpcf7 input[type="text"]:focus,
+.wpcf7 input[type="email"]:focus,
+.wpcf7 input[type="tel"]:focus,
+.wpcf7 input[type="url"]:focus,
+.wpcf7 input[type="number"]:focus,
+.wpcf7 select:focus,
+.wpcf7 textarea:focus {
+    border-color: var(--wp--preset--color--primary-green, #4CAF50);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+.wpcf7 textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.wpcf7 input[type="submit"] {
+    background-color: var(--wp--preset--color--primary-green, #4CAF50);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.wpcf7 input[type="submit"]:hover {
+    background-color: var(--wp--preset--color--dark-green, #3d8b40);
+    transform: translateY(-2px);
+}
+
+.wpcf7 input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.wpcf7 .ajax-loader {
+    margin-left: 10px;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+    color: var(--wp--preset--color--error, #d32f2f);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.wpcf7 .wpcf7-response-output {
+    margin: 2rem 0 0;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.wpcf7 .wpcf7-validation-errors,
+.wpcf7 .wpcf7-acceptance-missing {
+    background-color: rgba(255, 193, 7, 0.1);
+    border: 1px solid var(--wp--preset--color--warning, #ff9800);
+    color: var(--wp--preset--color--dark-warning, #e65100);
+}
+
+.wpcf7 .wpcf7-mail-sent-ok {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid var(--wp--preset--color--success, #4CAF50);
+    color: var(--wp--preset--color--dark-success, #2e7d32);
+}
+
+/* Form Grid Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-grid .full-width {
+    grid-column: span 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid .full-width {
+        grid-column: auto;
+    }
+    
+    .wpcf7 form {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,17 @@
+/**
+ * Theme Name: VAC Block Theme
+ * Theme URI: https://www.vasukiagro.in/
+ * Author: S P Pramodh
+ * Author URI: https://www.sppcode.in/
+ * Description: Custom block theme for VASUKI AGRO CHEMICALS LLP, a manufacturer of plant growth promoters using bio materials.
+ * Requires at least: 6.0
+ * Tested up to: 6.4
+ * Requires PHP: 7.4
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: vac-block-theme
+ * Tags: block-theme, full-site-editing, agriculture, organic, responsive
+ */
+
+/* Only include minimal CSS here as most styling will be in theme.json */
