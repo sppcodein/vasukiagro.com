@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -197,6 +197,7 @@
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--medium)",
+					"fontStyle": "normal",
 					"fontWeight": "500"
 				}
 			},
@@ -249,6 +250,7 @@
 			"background": "var(--wp--preset--color--white)",
 			"text": "var(--wp--preset--color--dark-gray)"
 		},
+		"css": ".wp-block-navigation__responsive-container-content {\n gap: 0!important;\n}\n\n.contact-section,\n.site-footer{\n  margin-block-start: 0;\n}\n\n.main-menu li{\n   padding: 2px!important;\n}\n\n@media screen and (max-width: 600px) {\n    #modal-1-content ul li{\n     margin: 20px!important;\n    }\n}",
 		"elements": {
 			"h1": {
 				"color": {
@@ -307,6 +309,8 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--montserrat)",
 			"fontSize": "var(--wp--preset--font-size--medium)",
+			"fontStyle": "normal",
+			"fontWeight": "600",
 			"lineHeight": "1.6"
 		}
 	},
