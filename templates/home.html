@@ -1,0 +1,61 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70"}}},"className":"site-content"} -->
+<main class="wp-block-group site-content" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--70)">
+    <!-- wp:group {"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group">
+        <!-- wp:heading {"textAlign":"center","level":1,"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|50"}},"typography":{"fontWeight":"700"}},"textColor":"primary-green","fontSize":"x-large"} -->
+        <h1 class="wp-block-heading alignwide has-text-align-center has-primary-green-color has-text-color has-x-large-font-size" style="margin-bottom:var(--wp--preset--spacing--50);font-weight:700">Our Blog</h1>
+        <!-- /wp:heading -->
+
+        <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}},"fontSize":"medium"} -->
+        <p class="has-text-align-center has-medium-font-size" style="margin-bottom:var(--wp--preset--spacing--60)">Latest news, tips, and insights from VASUKI AGRO CHEMICALS LLP</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide"} -->
+        <div class="wp-block-query alignwide">
+            <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"grid","columnCount":3}} -->
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"8px"}},"backgroundColor":"white","className":"post-card","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group post-card has-white-background-color has-background" style="border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+                    <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","style":{"border":{"radius":{"top":"8px","right":"8px"}}}} /-->
+
+                    <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+                        <!-- wp:post-date {"format":"M j, Y","style":{"typography":{"fontSize":"0.875rem"}},"textColor":"medium-gray"} /-->
+
+                        <!-- wp:post-title {"level":3,"isLink":true,"style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}},"typography":{"fontWeight":"600"}},"fontSize":"large"} /-->
+
+                        <!-- wp:post-excerpt {"excerptLength":20,"style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|30"}}},"fontSize":"small"} /-->
+
+                        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+                        <div class="wp-block-group">
+                            <!-- wp:post-terms {"term":"category","style":{"typography":{"fontSize":"0.875rem"}}} /-->
+                            
+                            <!-- wp:read-more {"content":"Read More →","style":{"typography":{"fontSize":"0.875rem","fontWeight":"600"}},"textColor":"primary-green"} /-->
+                        </div>
+                        <!-- /wp:group -->
+                    </div>
+                    <!-- /wp:group -->
+                </div>
+                <!-- /wp:group -->
+            <!-- /wp:post-template -->
+
+            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|60"}}}} -->
+                <!-- wp:query-pagination-previous /-->
+                <!-- wp:query-pagination-numbers /-->
+                <!-- wp:query-pagination-next /-->
+            <!-- /wp:query-pagination -->
+
+            <!-- wp:query-no-results -->
+                <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
+                <p class="has-text-align-center has-medium-font-size">No posts found.</p>
+                <!-- /wp:paragraph -->
+            <!-- /wp:query-no-results -->
+        </div>
+        <!-- /wp:query -->
+    </div>
+    <!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
