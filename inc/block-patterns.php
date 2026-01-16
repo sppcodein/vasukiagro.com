@@ -339,5 +339,38 @@ function vac_block_theme_register_block_patterns() {
 <!-- /wp:cover -->',
         )
     );
+    
+    // Featured News Cards Block Pattern
+    register_block_pattern(
+        'vac-block-theme/featured-news-cards',
+        array(
+            'title'       => __( 'Featured News Cards', 'vac-block-theme' ),
+            'description' => __( 'Display featured blog posts with large image cards and overlay text', 'vac-block-theme' ),
+            'categories'  => array( 'vac-blocks' ),
+            'content'     => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"backgroundColor":"white","className":"featured-news-section","layout":{"type":"constrained"}} -->
+<div class="wp-block-group featured-news-section has-white-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+    <!-- wp:heading {"textAlign":"center","className":"animate-on-scroll fade-in","textColor":"primary-green"} -->
+    <h2 class="wp-block-heading has-text-align-center animate-on-scroll fade-in has-primary-green-color has-text-color">Latest News &amp; Updates</h2>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"align":"center","className":"animate-on-scroll fade-in"} -->
+    <p class="has-text-align-center animate-on-scroll fade-in">Stay updated with our latest achievements, press coverage, and industry insights</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:shortcode -->
+    [vac_featured_news_cards]
+    <!-- /wp:shortcode -->
+
+    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
+    <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
+        <!-- wp:button {"backgroundColor":"primary-green","textColor":"white","className":"is-style-fill"} -->
+        <div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-green-background-color has-text-color has-background wp-element-button" href="/blog/">View All News</a></div>
+        <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+</div>
+<!-- /wp:group -->',
+        )
+    );
 }
 add_action( 'init', 'vac_block_theme_register_block_patterns' );

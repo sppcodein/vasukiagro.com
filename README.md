@@ -29,6 +29,29 @@ The theme includes several custom block patterns designed specifically for agric
 1. **Product Features Grid**: Showcase product features with icons and descriptions
 2. **Farmer Testimonials**: Display testimonials from farmers using your products
 3. **Call to Action Banner**: Encourage visitors to contact you or explore products
+4. **Featured News Cards**: Display featured blog posts with large image cards and overlay text (NEW!)
+
+### Featured News Cards
+
+The Featured News Cards pattern dynamically displays your blog posts in an attractive card-based layout with:
+
+- Large images with gradient overlays
+- Category badges
+- Post titles and excerpts
+- Publication dates
+- "Read More" links
+- SEO-optimized structured data
+- Responsive design for all devices
+- Scroll animations
+
+**How to Use:**
+
+1. Create blog posts with featured images
+2. Mark posts as "Featured" using the meta box in the post editor
+3. Add the Featured News Cards pattern to any page
+4. Posts will automatically appear in the cards
+
+For detailed documentation, see [FEATURED-NEWS.md](FEATURED-NEWS.md)
 
 ## Requirements
 

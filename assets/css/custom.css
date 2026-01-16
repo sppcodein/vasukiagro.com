@@ -262,3 +262,308 @@ textarea:focus {
         padding: 1.5rem;
     }
 }
+
+/* ============================================
+   Featured News Cards Section
+   ============================================ */
+
+.featured-news-section {
+    position: relative;
+    overflow: hidden;
+    max-width: var(--wp--style--global--wide-size, 1340px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vac-featured-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: var(--wp--style--global--wide-size, 1340px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.25rem;
+    align-items: stretch;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .vac-featured-news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .vac-featured-news-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.75rem;
+    }
+}
+
+.vac-news-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--wp--preset--color--white);
+    height: 100%;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.vac-news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.vac-news-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.vac-news-card__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2E7D32 0%, #8BC34A 100%);
+    flex-shrink: 0;
+    display: block;
+    line-height: 0;
+}
+
+.vac-news-card__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    vertical-align: middle;
+}
+
+.vac-news-card:hover .vac-news-card__image {
+    transform: scale(1.05);
+}
+
+.vac-news-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.05) 50%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
+    pointer-events: none;
+}
+
+.vac-news-card__category {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    display: inline-block;
+    background: var(--wp--preset--color--sun-yellow);
+    color: var(--wp--preset--color--dark-gray);
+    padding: 0.5rem 1.0rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.vac-news-card:hover .vac-news-card__category {
+    background: var(--wp--preset--color--primary-green);
+    color: var(--wp--preset--color--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(46, 125, 50, 0.3);
+}
+
+.vac-news-card__content {
+    padding: 1.25rem 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: var(--wp--preset--color--white);
+}
+
+.vac-news-card__title {
+    color: var(--wp--preset--color--dark-gray);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 0.6rem 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.8rem;
+}
+
+.vac-news-card:hover .vac-news-card__title {
+    color: var(--wp--preset--color--primary-green);
+}
+
+.vac-news-card__excerpt {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 0.9rem 0;
+    font-family: 'Open Sans', sans-serif;
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; */
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.vac-news-card__meta {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 0.75rem;
+    margin-top: auto;
+    border-top: 1px solid var(--wp--preset--color--light-gray);
+}
+
+.vac-news-card__meta time {
+    color: #888;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+}
+
+.vac-news-card__meta time::before {
+    content: "📅";
+    font-size: 0.9rem;
+}
+
+.vac-news-card__read-more {
+    color: var(--wp--preset--color--primary-green);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0.4rem;
+}
+
+.vac-news-card__read-more::after {
+    content: "→";
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.vac-news-card:hover .vac-news-card__read-more {
+    color: var(--wp--preset--color--primary-green);
+}
+
+.vac-news-card:hover .vac-news-card__read-more::after {
+    transform: translateX(4px);
+}
+
+/* Animation delays for staggered entrance */
+.animate-delay-1 {
+    animation-delay: 0.15s;
+}
+
+.animate-delay-2 {
+    animation-delay: 0.3s;
+}
+
+/* Responsive adjustments for news cards */
+@media (max-width: 767px) {
+    .vac-news-card__image-wrapper {
+        height: 180px;
+    }
+
+    .vac-news-card__content {
+        padding: 1rem 1rem 0.85rem;
+    }
+
+    .vac-news-card__title {
+        font-size: 1.1rem;
+        min-height: auto;
+    }
+
+    .vac-news-card__excerpt {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 2;
+    }
+
+    .vac-news-card__category {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.8rem;
+    }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .vac-news-card__image-wrapper {
+        height: 200px;
+    }
+
+    .vac-news-card__title {
+        font-size: 1.15rem;
+    }
+}
+
+/* Loading state for images */
+.vac-news-card__image[loading="lazy"] {
+    background: linear-gradient(
+        90deg,
+        var(--wp--preset--color--light-gray) 0%,
+        var(--wp--preset--color--soft-sand) 50%,
+        var(--wp--preset--color--light-gray) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Accessibility improvements */
+.vac-news-card:focus-within {
+    outline: 3px solid var(--wp--preset--color--primary-green);
+    outline-offset: 4px;
+}
+
+.vac-news-card__link:focus {
+    outline: none;
+}
+
+/* Print styles */
+@media print {
+    .vac-news-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}

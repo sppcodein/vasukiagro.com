@@ -57,23 +57,29 @@ function initAnimations() {
  * Initialize lazy loading for images
  */
 function initLazyLoading() {
+    // If the browser supports native lazy loading, let it handle it.
+    // Do NOT override existing src/srcset unless data-src is explicitly provided.
     if ('loading' in HTMLImageElement.prototype) {
-        // Browser supports native lazy loading
         const lazyImages = document.querySelectorAll('img[loading="lazy"]');
         lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-            if (img.dataset.srcset) {
+            if (img.dataset && img.dataset.src) {
+                img.src = img.dataset.src;
+            }
+            if (img.dataset && img.dataset.srcset) {
                 img.srcset = img.dataset.srcset;
             }
         });
+        return;
     } else {
         // Fallback for browsers that don't support native lazy loading
         const lazyImageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const lazyImage = entry.target;
-                    lazyImage.src = lazyImage.dataset.src;
-                    if (lazyImage.dataset.srcset) {
+                    if (lazyImage.dataset && lazyImage.dataset.src) {
+                        lazyImage.src = lazyImage.dataset.src;
+                    }
+                    if (lazyImage.dataset && lazyImage.dataset.srcset) {
                         lazyImage.srcset = lazyImage.dataset.srcset;
                     }
                     lazyImage.classList.remove("lazy");
@@ -81,7 +87,7 @@ function initLazyLoading() {
                 }
             });
         });
-        
+        // Only observe images that use the lazy class with data-src attributes
         document.querySelectorAll('img.lazy').forEach(lazyImage => {
             lazyImageObserver.observe(lazyImage);
         });
